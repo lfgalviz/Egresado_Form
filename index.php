@@ -63,11 +63,21 @@
             font-size: 18px;
             color: #1d1d1b;
             font-weight: 500;
-        }.gotham_p4 {
+        }
+
+        .gotham_p4 {
             font-family: 'Gotham';
             font-size: 16px;
             color: #1d1d1b;
             font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .gotham_p5 {
+            font-family: 'Gotham';
+            font-size: 16px;
+            color: #d10a11;
+            margin-top: 0;
         }
 
         .container_form {
@@ -75,17 +85,20 @@
             margin: auto;
             border: 2px solid;
             border-color: #b78b1e;
-            border-radius: 5px;
+            border-radius: 15px;
             padding: 10px;
+            box-shadow: 0px 5px #fff8e7;
         }
+
         .container_form_2 {
             width: 90%;
             margin: auto;
             border: 2px solid;
             border-color: #b78b1e;
-            border-radius: 5px;
-            padding: 10px;
+            border-radius: 15px;
+            padding: 0px 10px 0px 10px;
             background-color: #fdf7e9;
+
         }
 
         .mail_custom {
@@ -100,6 +113,22 @@
             padding-right: 10px;
             float: right;
             font-size: 22px;
+        }
+
+        .espacio {
+            margin: 5px;
+        }
+
+        .phone_custom {
+            font-size: 20px
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 30%;
         }
     </style>
 </head>
@@ -120,7 +149,54 @@
     </div>
     <div class="container_form">
         <p class="yellow_p gotham_p3"><i class="fa fa-envelope"></i> Correos electrónicos <i class="fa fa-angle-up angle_up_custom"></i></p>
-        <div class="container_form_2"><p class="gotham_p4">Personal <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p></div>
+        <div class="container_form_2">
+            <p class="gotham_p4">Personal <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> carlos@carvajalino.com</p>
+        </div>
+        <div class="espacio"></div>
+        <div class="container_form_2">
+            <p class="gotham_p4">Corporativo <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> No registrado</p>
+        </div>
+    </div>
+    <br>
+    <div class="container_form">
+        <p class="yellow_p gotham_p3"><i class="fa fa-phone phone_custom"></i> Teléfonos <i class="fa fa-angle-up angle_up_custom"></i></p>
+        <div class="container_form_2">
+            <p class="gotham_p4">Celular <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> +57 3114013218</p>
+        </div>
+        <div class="espacio"></div>
+        <div class="container_form_2">
+            <p class="gotham_p4">Fijo <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> 3732832</p>
+        </div>
+    </div>
+    <br>
+    <div class="container_form">
+        <p class="yellow_p gotham_p3"><i class="fa fa-id-card-o"></i> Estado laboral <i class="fa fa-angle-up angle_up_custom"></i></p>
+        <div class="container_form_2">
+            <p class="gotham_p4">Ocupación primaria <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> Empresario</p>
+        </div>
+    </div><br>
+    <div class="container_form">
+        <p class="yellow_p gotham_p3"><i class="fa fa-map-marker phone_custom"></i> Direcciones <i class="fa fa-angle-up angle_up_custom"></i></p>
+        <div class="container_form_2">
+            <p class="gotham_p4">Permanente <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> No registrado</p>
+        </div>
+        <div class="espacio"></div>
+        <div class="container_form_2">
+            <p class="gotham_p4">Temporal <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
+            <div class="row">
+                <div class="column"><i class="fa fa-warning fa_custom"></i></div>
+                <div class="cloumn">
+                    <p class="gotham_p5"> Calle 82A N° 41E - 77 Conjunto Residencial Cerrado. La Castellana Casa 2 Ciudad Jardín Barranquilla Atlántico, Colombia</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 
