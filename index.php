@@ -137,7 +137,7 @@
             flex: 30%;
         }
 
-        .button {
+        button {
             background-color: #d10a11;
             border: none;
             color: white;
@@ -151,6 +151,10 @@
             border-radius: 50px;
             width: 90%;
             max-width: 20rem;
+        }
+
+        button:hover {
+            background-color: #aaa;
         }
 
         .disabled {
@@ -236,17 +240,17 @@
         }
 
         .modal-contents {
-            width: 85%;
+            width: 80%;
             background-color: white;
-            text-align: center;
-            padding: 20px 10px;
+            text-align: start;
+            padding: 20px 25px;
             position: relative;
             border-radius: 4px;
             max-width: 338px;
         }
 
         .modal-contents-2 {
-            width: 85%;
+            width: 80%;
             background-color: white;
             text-align: center;
             padding: 20px 10px;
@@ -256,7 +260,7 @@
         }
 
         .modal-contents-3 {
-            width: 85%;
+            width: 80%;
             background-color: white;
             text-align: start;
             padding: 20px 25px;
@@ -271,8 +275,8 @@
             padding: 8px;
             border: 1px solid gray;
             border-radius: 5px;
-            width: 90%;
-            max-width: 20rem;
+            width: 100%;
+            max-width: 320px;
         }
 
         .input-2 {
@@ -286,15 +290,12 @@
         }
 
         .close {
-            position: absolute;
-            top: 0;
-            right: 10px;
-            font-size: 42px;
-            color: #333;
-            transform: rotate(45deg);
+            text-align: start;
+            margin-left: 0%;
+            color: #9c9c9c;
+            font-weight: 700;
             cursor: pointer;
             background: #FFF;
-            border-radius: 50%;
             border: 0;
 
         }
@@ -304,20 +305,25 @@
             padding: 10px;
         }
 
+        .column-check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .left {
-            width: 25%;
+            width: 15%;
         }
 
         .right {
-            width: 75%;
+            width: 85%;
         }
 
         .custom-select {
             font-family: Arial;
-            width: 70px;
             height: 35px;
             /* centrar vertical y horizontalmente */
-            margin: 15px 0px 20px 20px;
+            margin: 15px 0px 0px 0px;
         }
 
         .custom-select-2 {
@@ -338,6 +344,10 @@
 
         option {
             padding: 10px;
+        }
+
+        .padding_left_10 {
+            padding-left: 10px;
         }
     </style>
 </head>
@@ -408,82 +418,87 @@
             </div>
         </button>
         <br>
-        <div class="form-group form-check">
-            <input type="checkbox" class="
-            
-            -check-input" id="conditions" name="conditions" value="1">
-            <label class="gotham_p2" for="conditions">Aceptar condiciones de uso</label>
+        <div class="row">
+            <div class="column-2 left form-group form-check">
+                <input type="checkbox" class="-check-input" id="conditions" name="conditions" value="1" onchange="change()">
+
+            </div>
+            <div class="column-check rigth"> <label class="gotham_p2" for="conditions">Aceptar condiciones de uso</label></div>
         </div>
         <div>
-            <button class="button gotham_p4">ACTUALIZAR</button>
-            <button class="button disabled gotham_p4">ACTUALIZAR</button>
+            <button type="button" id="button8" onclick="clickActualizar('.button')" form="formulario">ACTUALIZAR</button>
         </div>
+
     </div>
 </body>
 <!-- Modal Section -->
 <div class="bg-modal">
     <div class="modal-contents">
 
-        <button type="button" onclick="clickClose('.bg-modal')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-envelope"></i> Correo Personal</p>
         <form action="" id="formulario1">
-            <input type="text" placeholder="Correo de contacto">
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <label for="correoContacto" class="gotham_p4">Correo de contacto</label><br>
+            <input type="email" placeholder="Correo de contacto" name="correoContacto">
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
 
     </div>
 </div>
 <div class="bg-modal-2">
     <div class="modal-contents">
-        <button type="button" onclick="clickClose('.bg-modal-2')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-2')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-envelope"></i> Correo Corporativo</p>
         <form action="" id="formulario2">
-            <input type="text" placeholder="Correo de contacto">
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <label for="correoContacto2" class="gotham_p4">Correo de contacto</label><br>
+            <input type="email" placeholder="Correo de contacto" name="correoContacto2">
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
 
     </div>
 </div>
 <div class="bg-modal-3">
     <div class="modal-contents">
-        <button type="button" onclick="clickClose('.bg-modal-3')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-3')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-phone phone_custom"></i> Teléfono Celular</p>
         <form action="" id="formulario3">
+            <label for="numeroContacto" class="gotham_p4 padding_left_10">Número de contacto</label><br>
             <div class="row">
                 <div class="column-2 left"><select class="custom-select" name="numeroPais" id="numeroPais">
                         <option value="57">+57</option>
                     </select></div>
-                <div class="column-2 right"> <input type="number" placeholder="Número de contacto"></div>
+                <div class="column-2 right"> <input type="number" placeholder="Número de contacto" name="numeroContacto"></div>
             </div>
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
 </div>
 <div class="bg-modal-4">
     <div class="modal-contents">
-        <button type="button" onclick="clickClose('.bg-modal-4')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-4')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-phone phone_custom"></i> Teléfono Fijo</p>
-        <form action="" id="formulario3">
+        <form action="" id="formulario4">
+            <label for="numeroContacto2" class="gotham_p4 padding_left_10">Número de contacto</label><br>
             <div class="row">
                 <div class="column-2 left"><select class="custom-select" name="numeroPais" id="numeroPais">
                         <option value="57">+57</option>
                     </select></div>
-                <div class="column-2 right"> <input type="number" placeholder="Número de contacto"></div>
+                <div class="column-2 right"> <input type="number" placeholder="Número de contacto" name="numeroContacto2"></div>
             </div>
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
 </div>
 <div class="bg-modal-5">
     <div class="modal-contents-2">
-        <button type="button" onclick="clickClose('.bg-modal-5')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-5')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-id-card-o"></i> Estado Laboral</p>
-        <form action="" id="formulario3">
+        <form action="" id="formulario5">
 
             <select class="custom-select-2 gotham_p3" size="7" name="laboral" id="laboral">
                 <option value="Desempleado">Desempleado</option>
@@ -495,16 +510,16 @@
                 <option value="Jubilado">Jubilado</option>
 
             </select>
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
 </div>
 <div class="bg-modal-6">
     <div class="modal-contents-3">
-        <button type="button" onclick="clickClose('.bg-modal-6')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-6')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-map-marker phone_custom"></i> Dirección Permanente</p>
-        <form action="" id="formulario3">
+        <form action="" id="formulario6">
             <label for="direccionCompleta" class="gotham_p4">Dirección Completa</label><br>
             <input type="text" class="gotham_p5 input-2" id="direccionCompleta" name="direccionCompleta" value="Cra 42G # 90-67"><br>
             <input type="text" class="gotham_p5 input-2" id="direccionCompleta2" name="direccionCompleta2" value="Edificio IVELINDA, Apto 4B"><br>
@@ -527,40 +542,39 @@
                 <option value="Barranquilla">Barranquilla</option>
             </select><br>
 
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
 </div>
-
 <div class="bg-modal-7">
     <div class="modal-contents-3">
-        <button type="button" onclick="clickClose('.bg-modal-7')" class="close">+</button>
+        <button type="button" onclick="clickClose('.bg-modal-7')" class="close"><i class="fa fa-arrow-left"></i> Regresar</button>
         <h1 class="gotham_title">¡Ayúdanos a estar en contacto contigo!</h1>
         <p class="yellow_p gotham_p3"><i class="fa fa-map-marker phone_custom"></i> Dirección Permanente</p>
-        <form action="" id="formulario3">
-            <label for="direccionCompleta" class="gotham_p4">Dirección Completa</label><br>
-            <input type="text" class="gotham_p5 input-2" id="direccionCompleta" name="direccionCompleta" value="Cra 42G # 90-67"><br>
-            <input type="text" class="gotham_p5 input-2" id="direccionCompleta2" name="direccionCompleta2" value="Edificio IVELINDA, Apto 4B"><br>
+        <form action="" id="formulario7">
+            <label for="direccionCompleta3" class="gotham_p4">Dirección Completa</label><br>
+            <input type="text" class="gotham_p5 input-2" id="direccionCompleta3" name="direccionCompleta3" value="Cra 42G # 90-67"><br>
+            <input type="text" class="gotham_p5 input-2" id="direccionCompleta4" name="direccionCompleta4" value="Edificio IVELINDA, Apto 4B"><br>
 
-            <label for="barrio" class="gotham_p4">Barrio</label><br>
-            <input type="text" class="gotham_p5 input-2" id="barrio" name="barrio" value="Los Nogales"><br>
+            <label for="barrio2" class="gotham_p4">Barrio</label><br>
+            <input type="text" class="gotham_p5 input-2" id="barrio2" name="barrio2" value="Los Nogales"><br>
 
-            <label for="pais" class="gotham_p4">País</label><br>
-            <select class="custom-select-3 gotham_p5" name="pais" id="pais">
+            <label for="pais2" class="gotham_p4">País</label><br>
+            <select class="custom-select-3 gotham_p5" name="pais2" id="pais2">
                 <option value="Colombia">Colombia</option>
             </select><br>
 
-            <label for="departamento" class="gotham_p4">Estado / Departamento</label><br>
-            <select class="custom-select-3 gotham_p5" name="departamento" id="departamento">
+            <label for="departamento2" class="gotham_p4">Estado / Departamento</label><br>
+            <select class="custom-select-3 gotham_p5" name="departamento2" id="departamento2">
                 <option value="Atlantico">Atlántico</option>
             </select><br>
 
-            <label for="ciudad" class="gotham_p4">Ciudad / Municipio</label><br>
-            <select class="custom-select-3 gotham_p5" name="ciudad" id="ciudad">
+            <label for="ciudad2" class="gotham_p4">Ciudad / Municipio</label><br>
+            <select class="custom-select-3 gotham_p5" name="ciudad2" id="ciudad2">
                 <option value="Barranquilla">Barranquilla</option>
             </select><br>
 
-            <a href="#" class="button gotham_p4">CONFIRMAR Y CONTINUAR</a>
+            <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
 </div>
@@ -575,6 +589,19 @@
 
     function clickClose(modal) {
         document.querySelector(modal).style.display = "none";
+    }
+
+    function clickActualizar(button) {
+
+    }
+
+    function change() {
+        var decider = document.getElementById('conditions');
+        if (decider.checked) {
+            document.getElementById("button").disabled = false;
+        } else {
+            document.getElementById("button").disabled = true;
+        }
     }
 </script>
 <!--- END JS Section --->
