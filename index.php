@@ -1,4 +1,4 @@
-<?php require_once 'modal.php';?>
+<?php require_once 'modal.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -100,8 +100,6 @@
         if (boton_activo.style.display = "none" || boton_activo.style.display === "") {
             document.querySelector(modal).style.display = "flex";
         }
-
-
     }
 
     function clickClose(modal) {
@@ -109,16 +107,16 @@
     }
 
     function clickActualizar(button) {
-
+        var decider = document.getElementById('conditions');
+        if (!decider.checked) {
+            alert("Aceptar Terminos y Condiciones")
+        } else {
+            alert("listo para enviar formulario")
+        }
     }
 
     function change() {
-        var decider = document.getElementById('conditions');
-        if (decider.checked) {
-            document.getElementById("button").disabled = false;
-        } else {
-            document.getElementById("button").disabled = true;
-        }
+        alert("cambiar todo el css")
     }
 </script>
 <!--- END JS Section --->

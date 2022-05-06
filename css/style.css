@@ -141,9 +141,6 @@ button {
     max-width: 20rem;
 }
 
-button:hover {
-    background-color: #aaa;
-}
 
 .disabled {
     opacity: 0.5;
