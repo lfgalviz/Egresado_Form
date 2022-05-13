@@ -6,12 +6,14 @@
     background-color: #1d1d1b;
     height: 50px;
     width: 100%;
+    min-width: 340px;
 }
 
 .header_yellow {
     background-color: #b78b1e;
     height: 10px;
     width: 100%;
+    min-width: 340px;
 }
 
 .margin_out {
@@ -285,9 +287,9 @@ input {
 
 }
 
-.column-2 {
-    float: left;
-    padding: 10px;
+.column-2 { 
+    float: right;
+    padding: 10px 0px 10px 10px ;
 }
 
 .column-check {

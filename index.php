@@ -32,13 +32,13 @@
         <button type="button" id="button" onclick="clickMe('button','.bg-modal')" class="container_button" form="formulario1">
             <div class="container_form_2">
                 <p class="gotham_p4">Personal <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
-                <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> carlos@carvajalino.com</p>
+                <p class="gotham_p5" id="state"><i class="fa fa-warning fa_custom" id="state"></i> carlos@carvajalino.com</p>
             </div>
         </button>
         <div class="espacio"></div>
         <button type="button" id="button2" onclick="clickMe('button2','.bg-modal-2')" class="container_button" form="formulario2">
             <p class="gotham_p4">Corporativo <i class="fa fa-angle-right angle_up_custom yellow_p"></i></p>
-            <p class="gotham_p5"><i class="fa fa-warning fa_custom"></i> No registrado</p>
+            <p class="gotham_p5" id="state"><i class="fa fa-warning fa_custom" id="state"></i> No registrado</p>
         </button>
     </div>
     <br>
@@ -80,11 +80,11 @@
         </button>
         <br>
         <div class="row">
-            <div class="column-2 left form-group form-check">
-                <input type="checkbox" class="-check-input" id="conditions" name="conditions" value="1" onchange="change()">
+            <div class="column-2 left">
+                <input type="checkbox" id="conditions" name="conditions" value="1" onchange="change()">
 
             </div>
-            <div class="column-check rigth"> <label class="gotham_p2" for="conditions">Aceptar condiciones de uso</label></div>
+            <div class="column-check rigth"> <label class="gotham_p4" for="conditions">Mis datos están correctos</label></div>
         </div>
         <div>
             <button type="button" id="button8" onclick="clickActualizar('.button')" form="formulario">ACTUALIZAR</button>
@@ -95,6 +95,23 @@
 <!--- JS Section --->
 <script>
     function clickMe(button, modal) {
+        //cambiar color a rojo
+        var elements = document.getElementsByClassName('fa_custom'); // get all elements
+        var elements2 = document.getElementsByClassName('gotham_p5');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.color = "d10a11";
+        }
+        for (var i = 0; i < elements2.length; i++) {
+            elements2[i].style.color = "d10a11";
+        }
+        //end
+        //desactivar check
+        var checkBox = document.getElementById("conditions");
+        // If the checkbox is checked
+        if (checkBox.checked == true) {
+            checkBox.checked = false;
+        }
+        //end
         var boton = document.getElementById(button);
         var boton_activo = document.querySelector(modal);
         if (boton_activo.style.display = "none" || boton_activo.style.display === "") {
@@ -109,14 +126,37 @@
     function clickActualizar(button) {
         var decider = document.getElementById('conditions');
         if (!decider.checked) {
-            alert("Aceptar Terminos y Condiciones")
+            alert("Aceptar checkbox")
         } else {
             alert("listo para enviar formulario")
         }
     }
 
     function change() {
-        alert("cambiar todo el css")
+        var checkBox = document.getElementById("conditions");
+        // If the checkbox is checked
+        if (checkBox.checked == true) {
+            var elements = document.getElementsByClassName('fa_custom'); // get all elements
+            var elements2 = document.getElementsByClassName('gotham_p5');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.color = "00a000";
+            }
+            for (var i = 0; i < elements2.length; i++) {
+                elements2[i].style.color = "00a000";
+            }
+        } else {
+            var elements = document.getElementsByClassName('fa_custom'); // get all elements
+            var elements2 = document.getElementsByClassName('gotham_p5');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.color = "d10a11";
+            }
+            for (var i = 0; i < elements2.length; i++) {
+                elements2[i].style.color = "d10a11";
+            }
+
+        }
+
+        //  document.getElementById('state').style.color = "00a000";
     }
 </script>
 <!--- END JS Section --->
