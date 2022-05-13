@@ -128,7 +128,7 @@
 }
 
 button {
-    background-color: #d10a11;
+    background-color: #9c9c9c;
     border: none;
     color: white;
     padding: 10px 0px;
@@ -142,7 +142,9 @@ button {
     width: 90%;
     max-width: 20rem;
 }
-
+.buttonAgregar{
+    background-color: #fdf7e9;
+}
 
 .disabled {
     opacity: 0.5;

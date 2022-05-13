@@ -9,6 +9,7 @@
         <form action="" id="formulario1">
             <label for="correoContacto" class="gotham_p4">Correo de contacto</label><br>
             <input type="email" placeholder="Correo de contacto" name="correoContacto">
+            <button class="buttonAgregar">Agregar Correo Electrónico</button>
             <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
 
