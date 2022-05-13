@@ -24,7 +24,7 @@
             Eres parte de la comunidad más grande de Uninorte.
         </h1>
         <p class="gotham_p">Porque te queremos cerca siempre, ayúdanos a <strong>validar</strong> , <strong>completar</strong> y <strong>actualizar</strong> tus datos.</p>
-        <p class="gotham_p2">Última actualización: <?php echo "11/03/2016"; ?>. <br> Aquellos marcados con <i class="fa fa-warning fa_custom"></i> podrían estar desactualizados.</p>
+        <p class="gotham_p2">Última actualización: <?php echo "12/03/2016"; ?>. <br> Aquellos marcados con <i class="fa fa-warning fa_custom"></i> podrían estar desactualizados.</p>
 
     </div>
     <div class="container_form">
