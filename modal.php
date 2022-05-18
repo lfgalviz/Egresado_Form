@@ -9,7 +9,7 @@
         <form action="" id="formulario1">
             <label for="correoContacto" class="gotham_p4">Correo de contacto</label><br>
             <input type="email" placeholder="Correo de contacto" name="correoContacto">
-            <button class="buttonAgregar">Agregar Correo Electrónico</button>
+            <button type="button" id="" onclick="" class="button_agregar" form="formulario1">Agregar Correo Electrónico</button>
             <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
 
@@ -23,6 +23,7 @@
         <form action="" id="formulario2">
             <label for="correoContacto2" class="gotham_p4">Correo de contacto</label><br>
             <input type="email" placeholder="Correo de contacto" name="correoContacto2">
+            <button type="button" id="" onclick="" class="button_agregar" form="formulario1">Agregar Correo Electrónico</button>
             <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
 
@@ -41,6 +42,7 @@
                     </select></div>
                 <div class="column-2 right"> <input type="number" placeholder="Número de contacto" name="numeroContacto"></div>
             </div>
+            <button type="button" id="" onclick="" class="button_agregar" form="formulario1">Agregar Teléfono Celular</button>
             <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>
@@ -58,6 +60,7 @@
                     </select></div>
                 <div class="column-2 right"> <input type="number" placeholder="Número de contacto" name="numeroContacto2"></div>
             </div>
+            <button type="button" id="" onclick="" class="button_agregar" form="formulario1">Agregar Teléfono Celular</button>
             <button type="button">CONFIRMAR Y CONTINUAR</button>
         </form>
     </div>

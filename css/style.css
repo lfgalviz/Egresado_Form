@@ -92,6 +92,22 @@
     padding: 0px 10px 0px 10px;
     background-color: #fdf7e9;
 }
+.button_agregar {
+    background-color: #FFF;
+    border: 2px solid;
+    color:  #d10a11;
+    padding: 5px 0px;
+    text-align: center;
+     vertical-align: middle;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 5%;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 70%;
+    max-width: 20rem;
+}
 
 .container_form_2 {
     left: 0;
@@ -128,11 +144,12 @@
 }
 
 button {
-    background-color: #9c9c9c;
+    background-color: #d10a11;
     border: none;
     color: white;
     padding: 10px 0px;
     text-align: center;
+     vertical-align: middle;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -142,9 +159,7 @@ button {
     width: 90%;
     max-width: 20rem;
 }
-.buttonAgregar{
-    background-color: #fdf7e9;
-}
+
 
 .disabled {
     opacity: 0.5;
